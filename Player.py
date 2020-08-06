@@ -1,12 +1,12 @@
 import utils
 
 class Player:
-    def __init__(self, name):
+    def __init__(self, name, level=1, xp=0, gold=0, inventory=dict()):
         self.name = name
-        self.level = 1
-        self.xp = 0
-        self.gold = 0
-        self.inventory = dict()
+        self.level = level
+        self.xp = xp
+        self.gold = gold
+        self.inventory = inventory
 
     def castLine(self, fishes):
         caughtFish = utils.getRandomFish(fishes)
