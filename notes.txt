@@ -1,0 +1,20 @@
+> player
+name
+level / xp
+gold
+inventory
+
+> fish
+name
+description
+region
+goldValue
+xpValue
+
+> shop
+sellingItems
+sell all items
+
+...
+achievements
+trading?
