@@ -1,38 +1,25 @@
+import utils
 from Player import Player
-
-fishes = {"Arapaima":
-                  {"chance": 50,
-                  "xpWorth": 100,
-                  "goldWorth": 100},
-          "Bass":
-                  {"chance": 20,
-                  "xpWorth": 100,
-                  "goldWorth": 100},
-          "Lobster":
-                  {"chance": 20,
-                  "xpWorth": 100,
-                  "goldWorth": 100},
-          "Ray":
-                  {"chance": 10,
-                  "xpWorth": 100,
-                  "goldWorth": 100},
-          "Golden Chest":
-                  {"chance": 5,
-                  "xpWorth": 100,
-                  "goldWorth": 100}
-         }
 
 def main():
     player = Player("Kane")
-    while True:
-        print("Type 'fish' to cast your line!")
-        print(">>>", end=" ")
 
-        cmd = input()
-        if cmd == "fish":
+    fishes = utils.loadFishDB("fishDB.json")
+    print(fishes["Arapaima"]["xpWorth"])
+
+    while True:
+        print("Options: [f]ish | [i]nventory | [p]layer info | [e]xit")
+        cmd = input(">>> ").lower()
+
+        if cmd.startswith("f"): # fish
             player.castLine(fishes)
-        elif cmd == "inv":
+        elif cmd.startswith("i"): # inventory
             player.printInventory()
+        elif cmd.startswith("p"): # player info
+            print(player)
+        elif cmd.startswith("e"): # exit
+            print("Thanks for playing!")
+            return
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,27 @@
+{
+    "Arapaima": {
+        "chance": 50,
+        "xpWorth": 10,
+        "goldWorth": 100
+    },
+    "Bass": {
+        "chance": 20,
+        "xpWorth": 25,
+        "goldWorth": 250
+    },
+    "Lobster": {
+        "chance": 20,
+        "xpWorth": 25,
+        "goldWorth": 250
+    },
+    "Ray": {
+        "chance": 10,
+        "xpWorth": 100,
+        "goldWorth": 1000
+    },
+    "Golden Chest": {
+        "chance": 5,
+        "xpWorth": 250,
+        "goldWorth": 2500
+    }
+}

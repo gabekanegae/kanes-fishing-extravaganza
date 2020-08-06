@@ -1,5 +1,7 @@
 from random import randint
 
+import json
+
 def getRandomFish(fishes):
     totalSum = 0
     for fish, attributes in fishes.items():
@@ -13,3 +15,7 @@ def getRandomFish(fishes):
             return fish
         else:
             curSum += attributes["chance"]
+
+def loadFishDB(filename):
+    with open(filename) as f:
+        return json.load(f)
